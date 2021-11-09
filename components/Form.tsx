@@ -34,7 +34,7 @@ export default function Form() {
     setIsSubmitting(false)
     setTimeout(() => {
       setSubmitResponse({})
-    }, 2000)
+    }, 5000)
   }
 
   const handleChangeField = (fieldName: string) => {

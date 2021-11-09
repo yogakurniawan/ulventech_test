@@ -1,7 +1,6 @@
 export const getFields = async () => {
   try {
-    const url = 'https://ulventech-react-exam.netlify.app/api/form'
-    const response = await fetch(url)
+    const response = await fetch(process.env.NEXT_PUBLIC_API_URL)
     const { data } = await response.json()
     return data
   } catch (error) {
@@ -11,8 +10,7 @@ export const getFields = async () => {
 
 export const postFields = async (body: any) => {
   try {
-    const url = 'https://ulventech-react-exam.netlify.app/api/form'
-    const response: any = await fetch(url, {
+    const response: any = await fetch(process.env.NEXT_PUBLIC_API_URL, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
