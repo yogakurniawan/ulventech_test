@@ -19,8 +19,8 @@ export const postFields = async (body: any) => {
       },
       body: JSON.stringify(body)
     })
-    const { data } = await response.json()
-    return data
+    const responseJson = await response.json()
+    return responseJson
   } catch (error) {
     return null
   }
